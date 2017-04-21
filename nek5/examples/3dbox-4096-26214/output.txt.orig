@@ -1,0 +1,1585 @@
+/----------------------------------------------------------\
+|      _   __ ______ __ __  ______  ____    ____    ____   |
+|     / | / // ____// //_/ / ____/ / __ \ / __ \ / __ \ |
+|    /  |/ // __/  / ,<   /___ \  / / / // / / // / / /   |
+|   / /|  // /___ / /| | ____/ / / /_/ // /_/ // /_/ /     |
+|  /_/ |_//_____//_/ |_|/_____/  \____/ \____/ \____/   |
+|                                                          |
+|----------------------------------------------------------|
+|                                                          |
+| NEK5000:  Open Source Spectral Element Solver            |
+| COPYRIGHT (c) 2008-2010 UCHICAGO ARGONNE, LLC            |
+| Version:  1.0rc1 / SVN  r1094                            |
+| Web:      http://nek5000.mcs.anl.gov                     |
+|                                                          |
+\----------------------------------------------------------/
+                                                              
+
+ Number of processors:            2
+ REAL    wdsize      :            8
+ INTEGER wdsize      :            4
+
+
+  Beginning session:
+  /cise/research/hpc/tmishra/hybrid/paper/paper/hybrid/fortran/cmtbone2/nek5/exa
+
+ 
+ timer accuracy:   7.1525574E-08 sec
+
+ read .rea file
+ nelgt/nelgv/lelt:         512         512         512
+ lx1  /lx2  /lx3 :           7           7           7
+
+ mapping elements to processors
+ barrier called            0
+ barrier called            1
+            0          460          460          512          512  NELV
+            1           52           52          512          512  NELV
+ RANK     0 IEG       1       2       3       4       5       6       9      10
+                     11      12      13      14      17      18      19      20
+                     25      26      27      28      33      34      35      36
+                     41      42      43      44      49      50      51      52
+                     57      58      59      60      65      66      67      68
+                     69      70      71      72      73      74      75      76
+                     77      78      79      80      81      82      83      84
+                     89      90      91      92      97      98      99     100
+                    105     106     107     108     113     114     115     116
+                    121     122     123     124     129     130     131     132
+                    133     134     135     136     137     138     139     140
+                    141     142     143     144     145     146     147     148
+                    149     150     151     152     153     154     155     156
+                    157     158     159     160     161     162     163     164
+                    165     166     167     168     169     170     171     172
+                    173     174     175     176     177     178     179     180
+                    181     182     183     184     185     186     187     188
+                    189     190     191     192     193     194     195     196
+                    197     198     199     200     201     202     203     204
+                    205     206     207     208     209     210     211     212
+                    213     214     215     216     217     218     219     220
+                    221     222     223     224     225     226     227     228
+                    229     230     231     232     233     234     235     236
+                    237     238     239     240     241     242     243     244
+                    245     246     247     248     249     250     251     252
+                    253     254     255     256     257     258     259     260
+                    261     262     263     264     265     266     267     268
+                    269     270     271     272     273     274     275     276
+                    277     278     279     280     281     282     283     284
+                    285     286     287     288     289     290     291     292
+                    293     294     295     296     297     298     299     300
+                    301     302     303     304     305     306     307     308
+                    309     310     311     312     313     314     315     316
+                    317     318     319     320     321     322     323     324
+                    325     326     327     328     329     330     331     332
+                    333     334     335     336     337     338     339     340
+                    341     342     343     344     345     346     347     348
+                    349     350     351     352     353     354     355     356
+                    357     358     359     360     361     362     363     364
+                    365     366     367     368     369     370     371     372
+                    373     374     375     376     377     378     379     380
+                    381     382     383     384     385     386     387     388
+                    389     390     391     392     393     394     395     396
+                    397     398     399     400     401     402     403     404
+                    405     406     407     408     409     410     411     412
+                    413     414     415     416     417     418     419     420
+                    421     422     423     424     425     426     427     428
+                    429     430     431     432     433     434     435     436
+                    437     438     439     440     441     442     443     444
+                    445     446     447     448     449     450     451     452
+                    453     454     455     456     457     458     459     460
+                    461     462     463     464     465     466     467     468
+                    469     470     471     472     473     474     475     476
+                    477     478     479     480     481     482     483     484
+                    485     486     487     488     489     490     491     492
+                    493     494     495     496     497     498     499     500
+                    501     502     503     504     505     506     507     508
+                    509     510     511     512
+ element load imbalance:           408           52          460
+ done :: mapping elements to processors
+ barrier called            1
+  
+ barrier called            0
+            0  objects found
+ barrier called            0
+ barrier called            1
+ done :: read .rea file   0.34826E-01 sec
+
+ Reset the target Courant number to .5
+ setup mesh topology
+ barrier called            1
+ barrier called            0
+   Right-handed check complete for     512 elements. OK.
+   setvert3d:   7       48896      112896       48896       48896
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 3006 unique labels shared
+   pairwise times (avg, min, max): 2.26617e-05 2.25782e-05 2.27451e-05
+   crystal router                : 2.37584e-05 2.37226e-05 2.37942e-05
+   all reduce                    : 6.52313e-05 6.51121e-05 6.53505e-05
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 665012 172764 1157260
+   buffer bytes (avg, min, max): 48096 48096 48096
+ barrier called            1
+   setupds time 1.2554E-01 seconds   0  7       48896         512
+ barrier called            0
+ barrier called            1
+ barrier called            0
+            8  max multiplicity
+ done :: setup mesh topology
+  
+ barrier called            0
+ call usrdat
+ barrier called            1
+ done :: usrdat
+
+ generate geometry data
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ vol_t,vol_v:    64000.00000000384         64000.00000000384     
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ done :: generate geometry data
+  
+ call usrdat2
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ done :: usrdat2
+
+ regenerate geometry data            1
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ vol_t,vol_v:    7.999999999999548         7.999999999999548     
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ done :: regenerate geometry data            1
+  
+ verify mesh topology
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+   -1.000000000000000         1.000000000000000       Xrange
+   -1.000000000000000         1.000000000000000       Yrange
+   -1.000000000000000         1.000000000000000       Zrange
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            0
+ done :: verify mesh topology
+  
+ barrier called            1
+ barrier called            1
+ 118   Parameters from file:/cise/research/hpc/tmishra/hybrid/paper/paper/hybrid/fortran/cmtbone2/nek5/examples/3dboxHybrid/box.rea
+   1      1.00000     p001 DENSITY
+   2     -100.000     p002 VISCOS
+   7      1.00000     p007 RHOCP
+   8     -3000.00     p008 CONDUCT
+  11     1.000000E+01 p011 NSTEPS
+  12    -0.250000E-01 p012 DT
+  14      10.0000     p014 IOTIME
+  15     100.000000E+00 p015 IOSTEP
+  18     0.200000E-01 p018 GRID < 0 --> # cells on screen
+  19     -1.00000     p019 INTYPE
+  20      6.00000     p020 NORDER
+  21     0.100000E-06 p021 DIVERGENCE
+  22     0.300000E-08 p022 HELMHOLTZ
+  24     0.500000E-02 p024 TOLREL
+  25     0.100000E-01 p025 TOLABS
+  26      2.90000     p026 COURANT/NTAU
+  27      2.00000     p027 TORDER
+  28     0.000000E+00 p028 TORDER: mesh velocity (0: p28=p27)
+  65      1.00000     p065 #iofiles (eg, 0 or 64); <0 --> sep. dirs
+  66      4.00000     p066 output : <0=ascii, else binary
+  67      4.00000     p067 restart: <0=ascii, else binary
+  69      50000.0     p069       frequency of srf dump
+  76      40.0000     p076    p76=period tau (conv. time units) = p
+  93      80.0000     p093 Number of previous pressure solns saved
+  94      3.00000     p094 start projecting velocity after p94 step
+  95      5.00000     p095 start projecting pressure after p95 step
+  99     0.000000E+00 p099 dealiasing: <0--> off/3--> old/4--> new
+ 102      1.00000     p102 Dump out divergence at each time step
+ 103     0.100000E-01 p103 weight of stabilizing filter (.01)
+  
+ barrier called            0
+ barrier called            0
+ barrier called            0
+ barrier called            0
+ barrier called            0
+ barrier called            1
+ barrier called            1
+ barrier called            1
+ barrier called            1
+ IFTRAN   =  T
+ IFFLOW   =  T
+ IFHEAT   =  F
+ IFSPLIT  =  T
+ IFLOMACH =  F
+ IFUSERVP =  F
+ IFUSERMV =  F
+ IFSTRS   =  F
+ IFCHAR   =  F
+ IFCYCLIC =  F
+ IFAXIS   =  F
+ IFMVBD   =  F
+ IFMELT   =  F
+ IFMODEL  =  F
+ IFKEPS   =  F
+ IFMOAB   =  F
+ IFNEKNEK =  F
+ IFSYNC   =  T
+   
+ IFVCOR   =  F
+ IFINTQ   =  F
+ IFCWUZ   =  F
+ IFSWALL  =  F
+ IFGEOM   =  F
+ IFSURT   =  F
+ IFWCNO   =  F
+ IFCMT    =  T
+ IFVISC   =  F
+ IFFLTR   =  F
+   
+ IFTMSH for field            1    =   F
+ IFADVC for field            1    =   T
+ IFNONL for field            1    =   F
+   
+ Dealiasing enabled, lxd=            9
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+  
+ Estimated eigenvalues
+ EIGAA =     2.467401100272339     
+ EIGGA =     35968.42038816211     
+ EIGAE =     2.467401100272339     
+ EIGAS =    8.3333333333333329E-002
+ EIGGE =     35968.42038816211     
+ EIGGS =     2.000000000000000     
+  
+ verify mesh topology
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+   -1.000000000000000         1.000000000000000       Xrange
+   -1.000000000000000         1.000000000000000       Yrange
+   -1.000000000000000         1.000000000000000       Zrange
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            0
+ done :: verify mesh topology
+  
+ barrier called            1
+  E-solver strategy:  0 itr
+ barrier called            1
+ barrier called            0
+ mg_nx:            1            3            6
+ mg_ny:            1            3            6
+ mg_nz:            1            3            6
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 91 unique labels shared
+   pairwise times (avg, min, max): 2.08616e-06 2.0504e-06 2.12193e-06
+   crystal router                : 2.19345e-06 2.16961e-06 2.21729e-06
+   all reduce                    : 5.42402e-06 5.17368e-06 5.67436e-06
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 21392 6524 36260
+   buffer bytes (avg, min, max): 1456 1456 1456
+   setupds time 2.8272E-03 seconds   1  2         576         512
+   setvert3d:   4       10304       14400       10304       10304
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 765 unique labels shared
+   pairwise times (avg, min, max): 7.71284e-06 7.67708e-06 7.7486e-06
+   crystal router                : 7.55787e-06 7.51019e-06 7.60555e-06
+   all reduce                    : 2.07424e-05 2.06709e-05 2.08139e-05
+   used all_to_all method: crystal router
+   handle bytes (avg, min, max): 203832 82540 325124
+   buffer bytes (avg, min, max): 24480 24480 24480
+   setupds time 4.4352E-02 seconds   2  4       10304         512
+   setvert3d:   4       10304       14400       10304       10304
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 765 unique labels shared
+   pairwise times (avg, min, max): 7.70092e-06 7.65324e-06 7.7486e-06
+   crystal router                : 7.86781e-06 7.84397e-06 7.89165e-06
+   all reduce                    : 2.11835e-05 2.11239e-05 2.12431e-05
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 166952 45660 288244
+   buffer bytes (avg, min, max): 12240 12240 12240
+   setupds time 4.3628E-02 seconds   3  4       10304         512
+   setvert3d:   6       32832       65600       32832       32832
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 2095 unique labels shared
+   pairwise times (avg, min, max): 2.01941e-05 2.01225e-05 2.02656e-05
+   crystal router                : 1.91092e-05 1.90496e-05 1.91689e-05
+   all reduce                    : 5.06401e-05 5.04971e-05 5.07832e-05
+   used all_to_all method: crystal router
+   handle bytes (avg, min, max): 562416 221996 902836
+   buffer bytes (avg, min, max): 67040 67040 67040
+   setupds time 9.1220E-02 seconds   4  6       32832         512
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ regenerate geometry data            1
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ vol_t,vol_v:    7.999999999999548         7.999999999999548     
+ barrier called            1
+ barrier called            0
+ NOTE: All elements deformed , param(59) ^=0
+ done :: regenerate geometry data            1
+  
+ h1_mg_nx:            1            3            6
+ h1_mg_ny:            1            3            6
+ h1_mg_nz:            1            3            6
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 91 unique labels shared
+   pairwise times (avg, min, max): 2.02656e-06 1.97887e-06 2.07424e-06
+   crystal router                : 2.08616e-06 2.0504e-06 2.12193e-06
+   all reduce                    : 4.87566e-06 4.8399e-06 4.91142e-06
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 21392 6524 36260
+   buffer bytes (avg, min, max): 1456 1456 1456
+   setupds time 2.7854E-03 seconds   5  2         576         512
+   setvert3d:   4       10304       14400       10304       10304
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 765 unique labels shared
+   pairwise times (avg, min, max): 7.71284e-06 7.65324e-06 7.77245e-06
+   crystal router                : 7.64132e-06 7.60555e-06 7.67708e-06
+   all reduce                    : 2.13146e-05 2.12431e-05 2.13861e-05
+   used all_to_all method: crystal router
+   handle bytes (avg, min, max): 203832 82540 325124
+   buffer bytes (avg, min, max): 24480 24480 24480
+   setupds time 4.3800E-02 seconds   6  4       10304         512
+   setvert3d:   4       10304       14400       10304       10304
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 765 unique labels shared
+   pairwise times (avg, min, max): 7.58171e-06 7.53403e-06 7.62939e-06
+   crystal router                : 7.62939e-06 7.60555e-06 7.65324e-06
+   all reduce                    : 2.13742e-05 2.13146e-05 2.14338e-05
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 166952 45660 288244
+   buffer bytes (avg, min, max): 12240 12240 12240
+   setupds time 4.3530E-02 seconds   7  4       10304         512
+   setvert3d:   6       32832       65600       32832       32832
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 2095 unique labels shared
+   pairwise times (avg, min, max): 2.20418e-05 2.19822e-05 2.21014e-05
+   crystal router                : 2.1255e-05 2.12431e-05 2.12669e-05
+   all reduce                    : 5.11169e-05 5.09739e-05 5.126e-05
+   used all_to_all method: crystal router
+   handle bytes (avg, min, max): 562416 221996 902836
+   buffer bytes (avg, min, max): 67040 67040 67040
+   setupds time 9.1262E-02 seconds   8  6       32832         512
+   setvert3d:   7       48896      112896       48896       48896
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 3006 unique labels shared
+   pairwise times (avg, min, max): 2.27451e-05 2.26736e-05 2.28167e-05
+   crystal router                : 2.46406e-05 2.46048e-05 2.46763e-05
+   all reduce                    : 6.62565e-05 6.6185e-05 6.6328e-05
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 665012 172764 1157260
+   buffer bytes (avg, min, max): 48096 48096 48096
+   setupds time 1.2045E-01 seconds   9  7       48896         512
+   setvert3d:   9       90624      266240       90624       90624
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 5320 unique labels shared
+   pairwise times (avg, min, max): 4.02927e-05 4.02212e-05 4.03643e-05
+   crystal router                : 3.95536e-05 3.95298e-05 3.95775e-05
+   all reduce                    : 0.000107312 0.000107074 0.000107551
+   used all_to_all method: crystal router
+   handle bytes (avg, min, max): 1.43905e+06 558620 2319484
+   buffer bytes (avg, min, max): 170240 170240 170240
+ barrier called            1
+   setupds time 2.1245E-01 seconds  10  9       90624         512
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ setup h1 coarse grid, nx_crs=            2
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 91 unique labels shared
+   pairwise times (avg, min, max): 2.00272e-06 1.97887e-06 2.02656e-06
+   crystal router                : 2.08616e-06 2.0504e-06 2.12193e-06
+   all reduce                    : 5.23329e-06 4.98295e-06 5.48363e-06
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 21392 6524 36260
+   buffer bytes (avg, min, max): 1456 1456 1456
+ done :: setup h1 coarse grid    0.5297119617462158       sec
+  
+ call usrdat3
+ done :: usrdat3
+
+ Set up CMT-Nek
+   setvert3d:   9       90624      266240       90624       90624
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 4018 unique labels shared
+   pairwise times (avg, min, max): 4.25577e-05 4.25339e-05 4.25816e-05
+   crystal router                : 4.37021e-05 4.34637e-05 4.39405e-05
+   all reduce                    : 9.7239e-05 9.68218e-05 9.76563e-05
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 913972 223660 1604284
+   buffer bytes (avg, min, max): 64288 64288 64288
+ Initialized DG machinery
+ set initial conditions
+ nekuic (1) for ifld             1
+ barrier called            1
+ barrier called            0
+ barrier called            0
+ call nekuic for vel  
+ barrier called            1
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            0
+ barrier called            1
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            0
+ barrier called            1
+ xyz min    -1.0000      -1.0000      -1.0000    
+ uvwpt min  0.15000       0.0000       0.0000       0.0000       0.0000    
+ PS min      0.0000       0.0000      0.99000E+22
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            0
+ barrier called            1
+ xyz max     1.0000       1.0000       1.0000    
+ uvwpt max  0.15000       0.0000       0.0000       0.0000       0.0000    
+ PS max      0.0000       0.0000     -0.99000E+22
+ done :: set initial conditions
+  
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ call userchk
+ done :: userchk
+
+ barrier called            1
+ barrier called            0
+ barrier called            0
+ barrier called            1
+gridpoints unique/tot:        112896       175616
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+ barrier called            1
+ barrier called            0
+  dofs:                   110592                   110592
+ barrier called            0
+  
+ Initialization successfully completed    3.9833     sec
+ number of cores            2            0
+ barrier called            1
+ number of cores            2            1
+ Working on CPU
+ barrier called            1
+ Working on GPU
+ barrier called            0
+
+Starting time loop gpu ...
+
+ CPU nsteps           10            0 GPU nsteps           10            0
+ barrier called            1
+
+ barrier called            0
+     DT/DTCFL/DTFS/DTINIT   0.250E-01   0.695-309   0.695-309   0.250E-01
+Step      1, t= 2.5000000E-02, DT= 2.5000000E-02, C=  0.177 0.0000E+00 0.0000E+00
+ CMT branch active GPU
+ ------nelt:          460 lelt:         8192
+ nekcopy time    1.8310546875000000E-004
+ dealias time:    1.1682510375976563E-004
+ computeprimitive time:    2.1457672119140625E-006
+ fillq time   5.5789947509765625E-005
+ faceu time:   1.5974044799804688E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000754
+ first copy time::   5.7089328765869141E-003
+ in face state commo
+ in face state commo
+ face_state_commo time:   0.6082201004028320     
+allocate sharedIndex is 0.000293
+ testt             1
+ second copy time::   2.5119781494140625E-003
+ inviscid time:   7.3544979095458984E-003
+ surface integral time:   4.6801567077636719E-004
+ compute stage time:   1.3168334960937500E-002
+ calcu time:   1.6212463378906250E-005
+ nekcopy time    2.1457672119140625E-006
+ dealias time:    7.6293945312500000E-005
+ computeprimitive time:    7.6150894165039063E-004
+ fillq time   1.7166137695312500E-005
+ faceu time:   1.2636184692382813E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000074
+ first copy time::   2.0713806152343750E-003
+ in face state commo
+ time is    4.7683715820312500E-007   0.8926718235015869     
+   1.0786294937133789E-002   9.2397451400756836E-002
+ calc u time   2.0003318786621094E-003
+            2            3            4            1
+ in face state commo
+ face_state_commo time:   0.1540470123291016     
+allocate sharedIndex is 0.000344
+ testt             1
+ second copy time::   2.5315284729003906E-003
+ inviscid time:   7.1253776550292969E-003
+ surface integral time:   4.4703483581542969E-004
+ compute stage time:   1.3228178024291992E-002
+ calcu time:   1.6689300537109375E-005
+ nekcopy time    2.1457672119140625E-006
+ dealias time:    7.8678131103515625E-005
+ computeprimitive time:    5.4311752319335938E-004
+ fillq time   1.5258789062500000E-005
+ faceu time:   1.3113021850585938E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000099
+ first copy time::   2.0761489868164063E-003
+ in face state commo
+ time is    2.4300098419189453E-002   4.6244382858276367E-002
+   8.8775157928466797E-003   9.2278480529785156E-002
+ calc u time   2.0015239715576172E-003
+            2            3            4            1
+ in face state commo
+ face_state_commo time:   0.1519317626953125     
+allocate sharedIndex is 0.000327
+ testt             1
+ second copy time::   2.5441646575927734E-003
+ inviscid time:   7.1794986724853516E-003
+ surface integral time:   4.4965744018554688E-004
+ compute stage time:   1.3110160827636719E-002
+ calcu time:   1.5497207641601563E-005
+ all time is:    1.269628047943115     
+ cmt nek time is     1.269677877426147     
+ cmt time is     1.427353143692017     
+ userchk time is    2.1457672119140625E-006
+ schfile:
+ /cise/research/hpc/tmishra/hybrid/paper/paper/hybrid/fortran/cmtbone2/nek5/examples/3dboxHybrid/box.sch                             
+ time is    2.4262666702270508E-002   4.5930147171020508E-002
+   8.8725090026855469E-003   9.2388629913330078E-002
+ calc u time   2.0229816436767578E-003
+ Finished GPU
+ Finished CPU
+ barrier called            1
+ barrier called            0
+Step      2, t= 5.0000000E-02, DT= 2.5000000E-02, C=  0.177 1.3701E+00 1.3701E+00
+ ------nelt:          460 lelt:         8192
+ nekcopy time    9.5605850219726563E-005
+ dealias time:    5.1498413085937500E-005
+ computeprimitive time:    2.6226043701171875E-006
+ fillq time   2.2411346435546875E-005
+ faceu time:   2.0980834960937500E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000268
+ first copy time::   2.6254653930664063E-003
+ in face state commo
+ in face state commo
+ testt             1
+ face_state_commo time:   6.9975137710571289E-002
+allocate sharedIndex is 0.000258
+ second copy time::   2.5591850280761719E-003
+ inviscid time:   7.0481300354003906E-003
+ surface integral time:   4.6563148498535156E-004
+ compute stage time:   1.3233661651611328E-002
+ calcu time:   1.4305114746093750E-005
+ nekcopy time    2.3841857910156250E-006
+ dealias time:    1.9073486328125000E-006
+ computeprimitive time:    6.0844421386718750E-004
+ fillq time   1.3589859008789063E-005
+ faceu time:   1.1205673217773438E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000094
+ first copy time::   2.1162033081054688E-003
+ in face state commo
+ time is    2.3841857910156250E-007   6.2548637390136719E-002
+   8.8415145874023438E-003   9.2419385910034180E-002
+ calc u time   2.0260810852050781E-003
+            2            3            4            1
+ in face state commo
+ testt             1
+ face_state_commo time:   0.1522455215454102     
+allocate sharedIndex is 0.000313
+ second copy time::   2.5861263275146484E-003
+ inviscid time:   6.9777965545654297E-003
+ surface integral time:   4.5347213745117188E-004
+ compute stage time:   1.3027667999267578E-002
+ calcu time:   1.6450881958007813E-005
+ nekcopy time    2.8610229492187500E-006
+ dealias time:    2.1457672119140625E-006
+ computeprimitive time:    6.2084197998046875E-004
+ fillq time   1.4066696166992188E-005
+ faceu time:   1.1205673217773438E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000090
+ first copy time::   2.0813941955566406E-003
+ in face state commo
+ time is    2.4334192276000977E-002   4.5603990554809570E-002
+   8.8634490966796875E-003   9.2367649078369141E-002
+ calc u time   2.0494461059570313E-003
+            2            3            4            1
+ in face state commo
+ testt             1
+ face_state_commo time:   0.1520128250122070     
+allocate sharedIndex is 0.000307
+ second copy time::   2.5737285614013672E-003
+ inviscid time:   6.9365501403808594E-003
+ surface integral time:   4.4822692871093750E-004
+ compute stage time:   1.2924909591674805E-002
+ calcu time:   1.5020370483398438E-005
+ all time is:   0.4374268054962158     
+ cmt nek time is    0.4374499320983887     
+ cmt time is    0.9652767181396484     
+ userchk time is    2.8610229492187500E-006
+ time is    2.4290800094604492E-002   4.5498609542846680E-002
+   8.8503360748291016E-003   9.2386484146118164E-002
+ calc u time   2.0265579223632813E-003
+ Finished GPU
+ Finished CPU
+ barrier called            1
+ barrier called            0
+Step      3, t= 7.5000000E-02, DT= 2.5000000E-02, C=  0.177 1.9018E+00 5.3168E-01
+ ------nelt:          460 lelt:         8192
+ nekcopy time    8.7499618530273438E-005
+ dealias time:    3.0994415283203125E-006
+ computeprimitive time:    1.9073486328125000E-006
+ fillq time   2.7656555175781250E-005
+ faceu time:   1.5735626220703125E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000131
+ first copy time::   2.4893283843994141E-003
+ in face state commo
+ in face state commo
+ testt             1
+ face_state_commo time:   6.9633722305297852E-002
+allocate sharedIndex is 0.000248
+ second copy time::   2.5377273559570313E-003
+ inviscid time:   6.9363117218017578E-003
+ surface integral time:   4.5084953308105469E-004
+ compute stage time:   1.3183116912841797E-002
+ calcu time:   1.5020370483398438E-005
+ nekcopy time    2.6226043701171875E-006
+ dealias time:    1.9073486328125000E-006
+ computeprimitive time:    6.2537193298339844E-004
+ fillq time   1.3351440429687500E-005
+ faceu time:   1.0967254638671875E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000087
+ first copy time::   2.0756721496582031E-003
+ in face state commo
+ time is    2.3841857910156250E-007   6.2125682830810547E-002
+   8.8648796081542969E-003   9.2375516891479492E-002
+ calc u time   2.0291805267333984E-003
+            2            3            4            1
+ in face state commo
+ testt             1
+ face_state_commo time:   0.1522293090820313     
+allocate sharedIndex is 0.000294
+ second copy time::   2.5687217712402344E-003
+ inviscid time:   6.9327354431152344E-003
+ surface integral time:   4.5108795166015625E-004
+ compute stage time:   1.2881278991699219E-002
+ calcu time:   1.4543533325195313E-005
+ nekcopy time    2.6226043701171875E-006
+ dealias time:    1.9073486328125000E-006
+ computeprimitive time:    6.2036514282226563E-004
+ fillq time   1.3351440429687500E-005
+ faceu time:   1.0967254638671875E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000095
+ first copy time::   2.1095275878906250E-003
+ in face state commo
+ time is    2.4291038513183594E-002   4.5448780059814453E-002
+   8.8474750518798828E-003   9.2339277267456055E-002
+ calc u time   2.0368099212646484E-003
+            2            3            4            1
+ in face state commo
+ testt             1
+ face_state_commo time:   0.1521310806274414     
+allocate sharedIndex is 0.000248
+ second copy time::   2.5751590728759766E-003
+ inviscid time:   6.9565773010253906E-003
+ surface integral time:   4.5228004455566406E-004
+ compute stage time:   1.3060569763183594E-002
+ calcu time:   1.3828277587890625E-005
+ all time is:   0.4369308948516846     
+ cmt nek time is    0.4369544982910156     
+ cmt time is    0.4964866638183594     
+ userchk time is    1.9073486328125000E-006
+ time is    2.4286031723022461E-002   4.5532703399658203E-002
+   8.8584423065185547E-003   9.2362642288208008E-002
+ calc u time   2.0461082458496094E-003
+ Finished GPU
+ Finished CPU
+ barrier called            1
+ barrier called            0
+Step      4, t= 1.0000000E-01, DT= 2.5000000E-02, C=  0.177 2.4328E+00 5.3098E-01
+ ------nelt:          460 lelt:         8192
+ nekcopy time    8.3923339843750000E-005
+ dealias time:    2.8610229492187500E-006
+ computeprimitive time:    2.1457672119140625E-006
+ fillq time   2.8133392333984375E-005
+ faceu time:   1.5497207641601563E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000132
+ first copy time::   2.5062561035156250E-003
+ in face state commo
+ in face state commo
+ testt             1
+ face_state_commo time:   6.9625139236450195E-002
+allocate sharedIndex is 0.000249
+ second copy time::   2.5622844696044922E-003
+ inviscid time:   7.0853233337402344E-003
+ surface integral time:   4.5752525329589844E-004
+ compute stage time:   1.3095617294311523E-002
+ calcu time:   1.5974044799804688E-005
+ nekcopy time    2.3841857910156250E-006
+ dealias time:    1.9073486328125000E-006
+ computeprimitive time:    6.1464309692382813E-004
+ fillq time   1.3351440429687500E-005
+ faceu time:   1.0967254638671875E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000105
+ first copy time::   2.0918846130371094E-003
+ in face state commo
+ time is    7.1525573730468750E-007   5.8763027191162109E-002
+   8.8758468627929688E-003   9.2551946640014648E-002
+ calc u time   2.0236968994140625E-003
+            2            3            4            1
+ in face state commo
+ testt             1
+ face_state_commo time:   0.1523566246032715     
+allocate sharedIndex is 0.000298
+ second copy time::   2.5660991668701172E-003
+ inviscid time:   6.9680213928222656E-003
+ surface integral time:   4.5418739318847656E-004
+ compute stage time:   1.3126611709594727E-002
+ calcu time:   1.5497207641601563E-005
+ nekcopy time    2.1457672119140625E-006
+ dealias time:    4.2915344238281250E-006
+ computeprimitive time:    6.2918663024902344E-004
+ fillq time   1.4066696166992188E-005
+ faceu time:   1.1920928955078125E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000092
+ first copy time::   2.1159648895263672E-003
+ in face state commo
+ time is    2.4294137954711914E-002   4.5476913452148438E-002
+   8.8591575622558594E-003   9.2398643493652344E-002
+ calc u time   2.0229816436767578E-003
+            2            3            4            1
+ in face state commo
+ testt             1
+ face_state_commo time:   0.1520748138427734     
+allocate sharedIndex is 0.000291
+ second copy time::   2.5928020477294922E-003
+ inviscid time:   7.0199966430664063E-003
+ surface integral time:   4.5776367187500000E-004
+ compute stage time:   1.3166189193725586E-002
+ calcu time:   1.5020370483398438E-005
+ all time is:   0.4375133514404297     
+ cmt nek time is    0.4375393390655518     
+ cmt time is     1.028035163879395     
+ userchk time is    2.1457672119140625E-006
+ time is    2.4300575256347656E-002   4.5685768127441406E-002
+   8.8798999786376953E-003   9.2562198638916016E-002
+ calc u time   2.0577907562255859E-003
+ Finished GPU
+ Finished CPU
+ barrier called            1
+ barrier called            0
+Step      5, t= 1.2500000E-01, DT= 2.5000000E-02, C=  0.177 2.9645E+00 5.3167E-01
+ ------nelt:          460 lelt:         8192
+ nekcopy time    7.8916549682617188E-005
+ dealias time:    1.9073486328125000E-006
+ computeprimitive time:    2.3841857910156250E-006
+ fillq time   4.9591064453125000E-005
+ faceu time:   1.2397766113281250E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000130
+ first copy time::   2.4948120117187500E-003
+ in face state commo
+ in face state commo
+ testt             1
+ face_state_commo time:   6.9550275802612305E-002
+allocate sharedIndex is 0.000267
+ second copy time::   2.5680065155029297E-003
+ inviscid time:   6.9596767425537109E-003
+ surface integral time:   4.5824050903320313E-004
+ compute stage time:   1.3127803802490234E-002
+ calcu time:   1.6212463378906250E-005
+ nekcopy time    1.9073486328125000E-006
+ dealias time:    5.0067901611328125E-006
+ computeprimitive time:    6.2298774719238281E-004
+ fillq time   1.3828277587890625E-005
+ faceu time:   1.0728836059570313E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000096
+ first copy time::   2.0973682403564453E-003
+ in face state commo
+ time is    2.3841857910156250E-007   6.2227487564086914E-002
+   8.8565349578857422E-003   9.2340707778930664E-002
+ calc u time   2.0427703857421875E-003
+            2            3            4            1
+ in face state commo
+ testt             1
+ face_state_commo time:   0.1522974967956543     
+allocate sharedIndex is 0.000316
+ second copy time::   2.5799274444580078E-003
+ inviscid time:   6.9818496704101563E-003
+ surface integral time:   4.5537948608398438E-004
+ compute stage time:   1.3153076171875000E-002
+ calcu time:   1.5497207641601563E-005
+ nekcopy time    2.1457672119140625E-006
+ dealias time:    1.3828277587890625E-005
+ computeprimitive time:    7.6150894165039063E-004
+ fillq time   1.5258789062500000E-005
+ faceu time:   1.1920928955078125E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000078
+ first copy time::   2.0954608917236328E-003
+ in face state commo
+ time is    2.4287462234497070E-002   4.5468091964721680E-002
+   8.8825225830078125E-003   9.2336893081665039E-002
+ calc u time   2.0234584808349609E-003
+            2            3            4            1
+ in face state commo
+ testt             1
+ face_state_commo time:   0.1517350673675537     
+allocate sharedIndex is 0.000269
+ second copy time::   2.5751590728759766E-003
+ inviscid time:   7.0049762725830078E-003
+ surface integral time:   4.5895576477050781E-004
+ compute stage time:   1.3226032257080078E-002
+ calcu time:   1.5974044799804688E-005
+ all time is:   0.4371948242187500     
+ cmt nek time is    0.4372200965881348     
+ cmt time is    0.5593876838684082     
+ userchk time is    2.3841857910156250E-006
+ time is    2.4294853210449219E-002   4.5575618743896484E-002
+   8.8739395141601563E-003   9.2382431030273438E-002
+ calc u time   2.0487308502197266E-003
+ Finished GPU
+ Finished CPU
+ barrier called            1
+ barrier called            0
+Step      6, t= 1.5000000E-01, DT= 2.5000000E-02, C=  0.177 3.4956E+00 5.3111E-01
+ ------nelt:          460 lelt:         8192
+ nekcopy time    7.6532363891601563E-005
+ dealias time:    2.3841857910156250E-006
+ computeprimitive time:    2.1457672119140625E-006
+ fillq time   4.4822692871093750E-005
+ faceu time:   1.2397766113281250E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000069
+ first copy time::   2.4676322937011719E-003
+ in face state commo
+ in face state commo
+ testt             1
+ face_state_commo time:   6.9585323333740234E-002
+allocate sharedIndex is 0.000318
+ second copy time::   2.5639533996582031E-003
+ inviscid time:   7.1291923522949219E-003
+ surface integral time:   4.6467781066894531E-004
+ compute stage time:   1.3036012649536133E-002
+ calcu time:   1.4781951904296875E-005
+ nekcopy time    1.9073486328125000E-006
+ dealias time:    5.2452087402343750E-006
+ computeprimitive time:    7.7414512634277344E-004
+ fillq time   1.5020370483398438E-005
+ faceu time:   1.2874603271484375E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000111
+ first copy time::   2.1190643310546875E-003
+ in face state commo
+ time is    7.1525573730468750E-007   6.2232494354248047E-002
+   8.8527202606201172E-003   9.2390298843383789E-002
+ calc u time   2.0439624786376953E-003
+            2            3            4            1
+ in face state commo
+ testt             1
+ face_state_commo time:   0.1520514488220215     
+allocate sharedIndex is 0.000303
+ second copy time::   2.5882720947265625E-003
+ inviscid time:   6.9930553436279297E-003
+ surface integral time:   4.5466423034667969E-004
+ compute stage time:   1.3271808624267578E-002
+ calcu time:   1.5020370483398438E-005
+ nekcopy time    1.9073486328125000E-006
+ dealias time:    1.9073486328125000E-006
+ computeprimitive time:    6.1249732971191406E-004
+ fillq time   1.3351440429687500E-005
+ faceu time:   1.2636184692382813E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000106
+ first copy time::   2.1083354949951172E-003
+ in face state commo
+ time is    2.4325609207153320E-002   4.5426130294799805E-002
+   8.8734626770019531E-003   9.2392206192016602E-002
+ calc u time   2.0239353179931641E-003
+            2            3            4            1
+ in face state commo
+ testt             1
+ face_state_commo time:   0.1519641876220703     
+allocate sharedIndex is 0.000128
+ second copy time::   2.5601387023925781E-003
+ inviscid time:   7.0066452026367188E-003
+ surface integral time:   4.5919418334960938E-004
+ compute stage time:   1.3109683990478516E-002
+ calcu time:   1.4543533325195313E-005
+ all time is:   0.4372923374176025     
+ cmt nek time is    0.4373149871826172     
+ cmt time is     1.090587377548218     
+ userchk time is    2.6226043701171875E-006
+ time is    2.4295568466186523E-002   4.5654058456420898E-002
+   8.8560581207275391E-003   9.2593908309936523E-002
+ calc u time   2.0346641540527344E-003
+ Finished GPU
+ Finished CPU
+ barrier called            1
+ barrier called            0
+Step      7, t= 1.7500000E-01, DT= 2.5000000E-02, C=  0.177 4.0270E+00 5.3145E-01
+ ------nelt:          460 lelt:         8192
+ nekcopy time    8.7499618530273438E-005
+ dealias time:    2.3841857910156250E-006
+ computeprimitive time:    1.9073486328125000E-006
+ fillq time   1.5258789062500000E-005
+ faceu time:   1.5974044799804688E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000089
+ first copy time::   2.4743080139160156E-003
+ in face state commo
+ in face state commo
+ testt             1
+ face_state_commo time:   6.9519281387329102E-002
+allocate sharedIndex is 0.000301
+ second copy time::   2.5641918182373047E-003
+ inviscid time:   6.9818496704101563E-003
+ surface integral time:   4.6491622924804688E-004
+ compute stage time:   1.3285636901855469E-002
+ calcu time:   1.4781951904296875E-005
+ nekcopy time    2.1457672119140625E-006
+ dealias time:    1.9073486328125000E-006
+ computeprimitive time:    6.1082839965820313E-004
+ fillq time   1.3589859008789063E-005
+ faceu time:   1.1444091796875000E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000102
+ first copy time::   2.1619796752929688E-003
+ in face state commo
+ time is    2.3841857910156250E-007   6.2133550643920898E-002
+   8.8713169097900391E-003   9.2452526092529297E-002
+ calc u time   2.0465850830078125E-003
+            2            3            4            1
+ in face state commo
+ testt             1
+ face_state_commo time:   0.1522414684295654     
+allocate sharedIndex is 0.000265
+ second copy time::   2.6080608367919922E-003
+ inviscid time:   7.0192813873291016E-003
+ surface integral time:   4.6110153198242188E-004
+ compute stage time:   1.3042688369750977E-002
+ calcu time:   1.5497207641601563E-005
+ nekcopy time    2.1457672119140625E-006
+ dealias time:    2.1457672119140625E-006
+ computeprimitive time:    6.1750411987304688E-004
+ fillq time   1.5258789062500000E-005
+ faceu time:   1.2159347534179688E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000103
+ first copy time::   2.1030902862548828E-003
+ in face state commo
+ time is    2.4286508560180664E-002   4.5449018478393555E-002
+   8.8856220245361328E-003   9.2383861541748047E-002
+ calc u time   2.0382404327392578E-003
+            2            3            4            1
+ in face state commo
+ testt             1
+ face_state_commo time:   0.1522173881530762     
+allocate sharedIndex is 0.000319
+ second copy time::   2.5906562805175781E-003
+ inviscid time:   7.0314407348632813E-003
+ surface integral time:   4.6443939208984375E-004
+ compute stage time:   1.2899160385131836E-002
+ calcu time:   1.6212463378906250E-005
+ all time is:   0.4372265338897705     
+ cmt nek time is    0.4372496604919434     
+ cmt time is    0.6219749450683594     
+ userchk time is    1.9073486328125000E-006
+ time is    2.4298667907714844E-002   4.5759916305541992E-002
+   8.8713169097900391E-003   9.2590332031250000E-002
+ calc u time   2.0382404327392578E-003
+ Finished GPU
+ Finished CPU
+ barrier called            1
+ barrier called            0
+Step      8, t= 2.0000000E-01, DT= 2.5000000E-02, C=  0.177 4.5585E+00 5.3153E-01
+ ------nelt:          460 lelt:         8192
+ nekcopy time    7.7724456787109375E-005
+ dealias time:    1.9073486328125000E-006
+ computeprimitive time:    1.9073486328125000E-006
+ fillq time   5.2213668823242188E-005
+ faceu time:   1.2397766113281250E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000177
+ first copy time::   2.5241374969482422E-003
+ in face state commo
+ in face state commo
+ testt             1
+ face_state_commo time:   6.9442033767700195E-002
+allocate sharedIndex is 0.000305
+ second copy time::   2.5627613067626953E-003
+ inviscid time:   7.0333480834960938E-003
+ surface integral time:   4.5824050903320313E-004
+ compute stage time:   1.2994050979614258E-002
+ calcu time:   1.5020370483398438E-005
+ nekcopy time    2.1457672119140625E-006
+ dealias time:    5.0067901611328125E-006
+ computeprimitive time:    6.1869621276855469E-004
+ fillq time   1.4305114746093750E-005
+ faceu time:   1.1444091796875000E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000117
+ first copy time::   2.1364688873291016E-003
+ in face state commo
+ time is    2.3841857910156250E-007   6.2105655670166016E-002
+   8.8818073272705078E-003   9.2377901077270508E-002
+ calc u time   2.0306110382080078E-003
+            2            3            4            1
+ in face state commo
+ testt             1
+ face_state_commo time:   0.1526448726654053     
+allocate sharedIndex is 0.000253
+ second copy time::   2.5846958160400391E-003
+ inviscid time:   6.9830417633056641E-003
+ surface integral time:   4.6062469482421875E-004
+ compute stage time:   1.3048410415649414E-002
+ calcu time:   1.6212463378906250E-005
+ nekcopy time    1.9073486328125000E-006
+ dealias time:    2.1457672119140625E-006
+ computeprimitive time:    6.1249732971191406E-004
+ fillq time   1.5258789062500000E-005
+ faceu time:   1.1682510375976563E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000112
+ first copy time::   2.1131038665771484E-003
+ in face state commo
+ time is    2.4309158325195313E-002   4.5549869537353516E-002
+   8.8732242584228516E-003   9.2411518096923828E-002
+ calc u time   2.0363330841064453E-003
+            2            3            4            1
+ in face state commo
+ testt             1
+ face_state_commo time:   0.1520216464996338     
+allocate sharedIndex is 0.000330
+ second copy time::   2.5801658630371094E-003
+ inviscid time:   6.9890022277832031E-003
+ surface integral time:   4.6038627624511719E-004
+ compute stage time:   1.2952566146850586E-002
+ calcu time:   1.5497207641601563E-005
+ all time is:   0.4371092319488525     
+ cmt nek time is    0.4371325969696045     
+ cmt time is     1.153382301330566     
+ userchk time is    2.1457672119140625E-006
+ time is    2.4291753768920898E-002   4.5490980148315430E-002
+   8.8932514190673828E-003   9.2634439468383789E-002
+ calc u time   2.0360946655273438E-003
+ Finished GPU
+ Finished CPU
+ barrier called            1
+ barrier called            0
+Step      9, t= 2.2500000E-01, DT= 2.5000000E-02, C=  0.177 5.0900E+00 5.3149E-01
+ ------nelt:          460 lelt:         8192
+ nekcopy time    7.6770782470703125E-005
+ dealias time:    3.0994415283203125E-006
+ computeprimitive time:    1.9073486328125000E-006
+ fillq time   4.9591064453125000E-005
+ faceu time:   1.2159347534179688E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000102
+ first copy time::   2.5069713592529297E-003
+ in face state commo
+ in face state commo
+ testt             1
+ face_state_commo time:   6.9671392440795898E-002
+allocate sharedIndex is 0.000326
+ second copy time::   2.5677680969238281E-003
+ inviscid time:   6.9963932037353516E-003
+ surface integral time:   4.6229362487792969E-004
+ compute stage time:   1.2818336486816406E-002
+ calcu time:   1.6212463378906250E-005
+ nekcopy time    2.1457672119140625E-006
+ dealias time:    2.3841857910156250E-006
+ computeprimitive time:    6.2465667724609375E-004
+ fillq time   1.4066696166992188E-005
+ faceu time:   1.1682510375976563E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000131
+ first copy time::   2.1340847015380859E-003
+ in face state commo
+ time is    2.3841857910156250E-007   6.2223434448242188E-002
+   8.8675022125244141E-003   9.2396259307861328E-002
+ calc u time   2.0296573638916016E-003
+            2            3            4            1
+ in face state commo
+ testt             1
+ face_state_commo time:   0.1529183387756348     
+allocate sharedIndex is 0.000310
+ second copy time::   2.6051998138427734E-003
+ inviscid time:   6.9854259490966797E-003
+ surface integral time:   4.6706199645996094E-004
+ compute stage time:   1.3171911239624023E-002
+ calcu time:   1.5020370483398438E-005
+ nekcopy time    1.9073486328125000E-006
+ dealias time:    4.7683715820312500E-006
+ computeprimitive time:    6.2274932861328125E-004
+ fillq time   1.4543533325195313E-005
+ faceu time:   1.1682510375976563E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000118
+ first copy time::   2.1326541900634766E-003
+ in face state commo
+ time is    2.4304151535034180E-002   4.5829534530639648E-002
+   8.8610649108886719E-003   9.2310667037963867E-002
+ calc u time   2.0444393157958984E-003
+            2            3            4            1
+ in face state commo
+ testt             1
+ face_state_commo time:   0.1517248153686523     
+allocate sharedIndex is 0.000315
+ second copy time::   2.6125907897949219E-003
+ inviscid time:   7.0803165435791016E-003
+ surface integral time:   4.6038627624511719E-004
+ compute stage time:   1.3129711151123047E-002
+ calcu time:   1.5497207641601563E-005
+ all time is:   0.4375200271606445     
+ cmt nek time is    0.4375448226928711     
+ cmt time is    0.6852829456329346     
+ userchk time is    2.1457672119140625E-006
+ time is    2.4299860000610352E-002   4.5336246490478516E-002
+   8.8725090026855469E-003   9.2408657073974609E-002
+ calc u time   2.0418167114257813E-003
+ Finished GPU
+ Finished CPU
+ barrier called            1
+ barrier called            0
+Step     10, t= 2.5000000E-01, DT= 2.5000000E-02, C=  0.177 5.6213E+00 5.3130E-01
+ ------nelt:          460 lelt:         8192
+ nekcopy time    7.6293945312500000E-005
+ dealias time:    3.5762786865234375E-006
+ computeprimitive time:    1.9073486328125000E-006
+ fillq time   4.5776367187500000E-005
+ faceu time:   1.2636184692382813E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000118
+ first copy time::   2.5150775909423828E-003
+ in face state commo
+ in face state commo
+ testt             1
+ face_state_commo time:   6.9554805755615234E-002
+allocate sharedIndex is 0.000312
+ second copy time::   2.5928020477294922E-003
+ inviscid time:   7.0621967315673828E-003
+ surface integral time:   4.6277046203613281E-004
+ compute stage time:   1.3021707534790039E-002
+ calcu time:   1.4781951904296875E-005
+ nekcopy time    2.1457672119140625E-006
+ dealias time:    2.1457672119140625E-006
+ computeprimitive time:    6.1511993408203125E-004
+ fillq time   1.4305114746093750E-005
+ faceu time:   1.1205673217773438E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000114
+ first copy time::   2.1207332611083984E-003
+ in face state commo
+ time is    4.7683715820312500E-007   6.2077999114990234E-002
+   8.8880062103271484E-003   9.2327356338500977E-002
+ calc u time   2.0277500152587891E-003
+            2            3            4            1
+ in face state commo
+ testt             1
+ face_state_commo time:   0.1524379253387451     
+allocate sharedIndex is 0.000311
+ second copy time::   2.6059150695800781E-003
+ inviscid time:   7.1177482604980469E-003
+ surface integral time:   4.6658515930175781E-004
+ compute stage time:   1.3031959533691406E-002
+ calcu time:   1.6212463378906250E-005
+ nekcopy time    1.9073486328125000E-006
+ dealias time:    2.1457672119140625E-006
+ computeprimitive time:    8.0275535583496094E-004
+ fillq time   1.5735626220703125E-005
+ faceu time:   1.1682510375976563E-005
+ num_sh=           82
+ sh[0]           61            3            0            0
+allocate sharedIndex is 0.000089
+ first copy time::   2.0954608917236328E-003
+ in face state commo
+ time is    2.4299383163452148E-002   4.5642852783203125E-002
+   8.8765621185302734E-003   9.2328548431396484E-002
+ calc u time   2.0232200622558594E-003
+            2            3            4            1
+ in face state commo
+ testt             1
+ face_state_commo time:   0.1515409946441650     
+allocate sharedIndex is 0.000335
+ second copy time::   2.5961399078369141E-003
+ inviscid time:   7.0536136627197266E-003
+ surface integral time:   4.6801567077636719E-004
+ compute stage time:   1.3282299041748047E-002
+ calcu time:   1.4305114746093750E-005
+ all time is:   0.4373016357421875     
+ cmt nek time is    0.4373257160186768     
+ cmt time is     1.216385364532471     
+ userchk time is    2.1457672119140625E-006
+ time is    2.4293899536132813E-002   4.5483350753784180E-002
+   8.8751316070556641E-003   9.2393636703491211E-002
+ calc u time   2.0473003387451172E-003
+ call outfld: ifpsco:  F
+ Finished CPU
+ Finished solve            1
+
+       10  2.5000E-01 Write checkpoint:
+ nekgsync            0
+ barrier called            0

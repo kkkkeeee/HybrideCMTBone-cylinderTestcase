@@ -1,0 +1,388 @@
+/----------------------------------------------------------\
+|      _   __ ______ __ __  ______  ____    ____    ____   |
+|     / | / // ____// //_/ / ____/ / __ \ / __ \ / __ \ |
+|    /  |/ // __/  / ,<   /___ \  / / / // / / // / / /   |
+|   / /|  // /___ / /| | ____/ / / /_/ // /_/ // /_/ /     |
+|  /_/ |_//_____//_/ |_|/_____/  \____/ \____/ \____/   |
+|                                                          |
+|----------------------------------------------------------|
+|                                                          |
+| NEK5000:  Open Source Spectral Element Solver            |
+| COPYRIGHT (c) 2008-2010 UCHICAGO ARGONNE, LLC            |
+| Version:  1.0rc1 / SVN  r1094                            |
+| Web:      http://nek5000.mcs.anl.gov                     |
+|                                                          |
+\----------------------------------------------------------/
+                                                              
+
+ Number of processors:           10
+ REAL    wdsize      :            8
+ INTEGER wdsize      :            4
+
+
+  Beginning session:
+  /cise/research/hpc/tmishra/hybrid/paper/paper/hybrid/fortran/cmtbone2/nek5/exa
+
+ 
+ timer accuracy:   1.1920929E-07 sec
+
+ read .rea file
+ nelgt/nelgv/lelt:        8000        8000        4000
+ lx1  /lx2  /lx3 :           7           7           7
+
+ mapping elements to processors
+            0          800          800         8000         8000  NELV
+            3          800          800         8000         8000  NELV
+            8          800          800         8000         8000  NELV
+            6          800          800         8000         8000  NELV
+            9          800          800         8000         8000  NELV
+            4          800          800         8000         8000  NELV
+            1          800          800         8000         8000  NELV
+            2          800          800         8000         8000  NELV
+            5          800          800         8000         8000  NELV
+            7          800          800         8000         8000  NELV
+ RANK     0 IEG    6201    6202    6203    6204    6205    6206    6207    6208
+                   6209    6210    6211    6212    6213    6214    6215    6216
+                   6217    6218    6219    6220    6221    6222    6223    6224
+                   6225    6226    6227    6228    6229    6230    6231    6232
+                   6233    6234    6235    6236    6237    6238    6239    6240
+                   6241    6242    6243    6244    6245    6246    6247    6248
+                   6249    6250    6251    6252    6253    6254    6255    6256
+                   6257    6258    6259    6260    6261    6262    6263    6264
+                   6265    6266    6267    6268    6269    6270    6271    6272
+                   6273    6274    6275    6276    6277    6278    6279    6280
+                   6281    6282    6283    6284    6285    6286    6287    6288
+                   6289    6290    6291    6292    6293    6294    6295    6296
+                   6297    6298    6299    6300    6301    6302    6303    6304
+                   6305    6306    6307    6308    6309    6310    6321    6322
+                   6323    6324    6325    6326    6327    6328    6329    6330
+                   6341    6342    6343    6344    6345    6346    6347    6348
+                   6349    6350    6361    6362    6363    6364    6365    6366
+                   6367    6368    6369    6370    6381    6382    6383    6384
+                   6385    6386    6387    6388    6389    6390    6601    6602
+                   6603    6604    6605    6606    6607    6608    6609    6610
+                   6611    6612    6613    6614    6615    6616    6617    6618
+                   6619    6620    6621    6622    6623    6624    6625    6626
+                   6627    6628    6629    6630    6631    6632    6633    6634
+                   6635    6636    6637    6638    6639    6640    6641    6642
+                   6643    6644    6645    6646    6647    6648    6649    6650
+                   6651    6652    6653    6654    6655    6656    6657    6658
+                   6659    6660    6661    6662    6663    6664    6665    6666
+                   6667    6668    6669    6670    6671    6672    6673    6674
+                   6675    6676    6677    6678    6679    6680    6681    6682
+                   6683    6684    6685    6686    6687    6688    6689    6690
+                   6691    6692    6693    6694    6695    6696    6697    6698
+                   6699    6700    6701    6702    6703    6704    6705    6706
+                   6707    6708    6709    6710    6721    6722    6723    6724
+                   6725    6726    6727    6728    6729    6730    6741    6742
+                   6743    6744    6745    6746    6747    6748    6749    6750
+                   6761    6762    6763    6764    6765    6766    6767    6768
+                   6769    6770    6781    6782    6783    6784    6785    6786
+                   6787    6788    6789    6790    7001    7002    7003    7004
+                   7005    7006    7007    7008    7009    7010    7011    7012
+                   7013    7014    7015    7016    7017    7018    7019    7020
+                   7021    7022    7023    7024    7025    7026    7027    7028
+                   7029    7030    7031    7032    7033    7034    7035    7036
+                   7037    7038    7039    7040    7041    7042    7043    7044
+                   7045    7046    7047    7048    7049    7050    7051    7052
+                   7053    7054    7055    7056    7057    7058    7059    7060
+                   7061    7062    7063    7064    7065    7066    7067    7068
+                   7069    7070    7071    7072    7073    7074    7075    7076
+                   7077    7078    7079    7080    7081    7082    7083    7084
+                   7085    7086    7087    7088    7089    7090    7091    7092
+                   7093    7094    7095    7096    7097    7098    7099    7100
+                   7101    7102    7103    7104    7105    7106    7107    7108
+                   7109    7110    7121    7122    7123    7124    7125    7126
+                   7127    7128    7129    7130    7141    7142    7143    7144
+                   7145    7146    7147    7148    7149    7150    7159    7160
+                   7161    7162    7163    7164    7165    7166    7167    7168
+                   7169    7170    7176    7177    7179    7180    7181    7182
+                   7183    7184    7185    7186    7187    7188    7189    7190
+                   7196    7197    7199    7200    7401    7402    7403    7404
+                   7405    7406    7407    7408    7409    7410    7411    7412
+                   7413    7414    7415    7416    7417    7418    7419    7420
+                   7421    7422    7423    7424    7425    7426    7427    7428
+                   7429    7430    7431    7432    7433    7434    7435    7436
+                   7437    7438    7439    7440    7441    7442    7443    7444
+                   7445    7446    7447    7448    7449    7450    7451    7452
+                   7453    7454    7455    7456    7457    7458    7459    7460
+                   7461    7462    7463    7464    7465    7466    7467    7468
+                   7469    7470    7471    7472    7473    7474    7475    7476
+                   7477    7478    7479    7480    7481    7482    7483    7484
+                   7485    7486    7487    7488    7489    7490    7491    7492
+                   7493    7494    7495    7496    7497    7498    7499    7500
+                   7501    7502    7503    7504    7505    7506    7507    7508
+                   7509    7510    7516    7517    7518    7519    7520    7521
+                   7522    7523    7524    7525    7526    7527    7528    7529
+                   7530    7536    7537    7538    7539    7540    7541    7542
+                   7543    7544    7545    7546    7547    7548    7549    7550
+                   7556    7557    7558    7559    7560    7561    7562    7563
+                   7564    7565    7566    7567    7568    7569    7570    7579
+                   7580    7581    7582    7583    7584    7585    7586    7587
+                   7588    7589    7590    7599    7600    7801    7802    7803
+                   7804    7805    7806    7807    7808    7809    7810    7811
+                   7812    7813    7814    7815    7816    7817    7818    7819
+                   7820    7821    7822    7823    7824    7825    7826    7827
+                   7828    7829    7830    7831    7832    7833    7834    7835
+                   7836    7837    7838    7839    7840    7841    7842    7843
+                   7844    7845    7846    7847    7848    7849    7850    7851
+                   7852    7853    7854    7855    7856    7857    7858    7859
+                   7860    7861    7862    7863    7864    7865    7866    7867
+                   7868    7869    7870    7871    7872    7873    7874    7875
+                   7876    7877    7878    7879    7880    7881    7882    7883
+                   7884    7885    7886    7887    7888    7889    7890    7891
+                   7892    7893    7894    7895    7896    7897    7898    7899
+                   7900    7901    7902    7903    7904    7905    7906    7907
+                   7908    7909    7910    7916    7917    7918    7919    7920
+                   7921    7922    7923    7924    7925    7926    7927    7928
+                   7929    7930    7936    7937    7938    7939    7940    7941
+                   7942    7943    7944    7945    7946    7947    7948    7949
+                   7950    7956    7957    7958    7959    7960    7961    7962
+                   7963    7964    7965    7966    7967    7968    7969    7970
+                   7976    7977    7979    7980    7981    7982    7983    7984
+                   7985    7986    7987    7988    7989    7990    7999    8000
+ element load imbalance:             0          800          800
+ done :: mapping elements to processors
+  
+            0  objects found
+ done :: read .rea file   0.26684     sec
+
+ Reset the target Courant number to .5
+ setup mesh topology
+   Right-handed check complete for    8000 elements. OK.
+   setvert3d:   7      742400     1742400      742400      742400
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 120238 unique labels shared
+   pairwise times (avg, min, max): 0.000331123 0.000321031 0.000352812
+   crystal router                : 0.00432082 0.00420339 0.0043751
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 2.36455e+06 2320612 2426436
+   buffer bytes (avg, min, max): 412192 368576 482240
+   setupds time 8.4379E-01 seconds   0  7      742400        8000
+            8  max multiplicity
+ done :: setup mesh topology
+  
+ call usrdat
+ done :: usrdat
+
+ generate geometry data
+ vol_t,vol_v:    63999.99999998200         63999.99999998200     
+ done :: generate geometry data
+  
+ call usrdat2
+ done :: usrdat2
+
+ regenerate geometry data            1
+ vol_t,vol_v:    7.999999999994385         7.999999999994385     
+ done :: regenerate geometry data            1
+  
+ verify mesh topology
+   -1.000000000000000         1.000000000000000       Xrange
+   -1.000000000000000         1.000000000000000       Yrange
+   -1.000000000000000         1.000000000000000       Zrange
+ done :: verify mesh topology
+  
+ 118   Parameters from file:/cise/research/hpc/tmishra/hybrid/paper/paper/hybrid/fortran/cmtbone2/nek5/examples/3dboxHybrid/box.rea
+   1      1.00000     p001 DENSITY
+   2     -100.000     p002 VISCOS
+   7      1.00000     p007 RHOCP
+   8     -3000.00     p008 CONDUCT
+  11     30.00000E+00 p011 NSTEPS
+  12    -0.250000E-01 p012 DT
+  14      10.0000     p014 IOTIME
+  15     10.000000E+00 p015 IOSTEP
+  18     0.200000E-01 p018 GRID < 0 --> # cells on screen
+  19     -1.00000     p019 INTYPE
+  20      6.00000     p020 NORDER
+  21     0.100000E-06 p021 DIVERGENCE
+  22     0.300000E-08 p022 HELMHOLTZ
+  24     0.500000E-02 p024 TOLREL
+  25     0.100000E-01 p025 TOLABS
+  26      2.90000     p026 COURANT/NTAU
+  27      2.00000     p027 TORDER
+  28     0.000000E+00 p028 TORDER: mesh velocity (0: p28=p27)
+  65      1.00000     p065 #iofiles (eg, 0 or 64); <0 --> sep. dirs
+  66      4.00000     p066 output : <0=ascii, else binary
+  67      4.00000     p067 restart: <0=ascii, else binary
+  69      50000.0     p069       frequency of srf dump
+  76      40.0000     p076    p76=period tau (conv. time units) = p
+  93      80.0000     p093 Number of previous pressure solns saved
+  94      3.00000     p094 start projecting velocity after p94 step
+  95      5.00000     p095 start projecting pressure after p95 step
+  99     0.000000E+00 p099 dealiasing: <0--> off/3--> old/4--> new
+ 102      1.00000     p102 Dump out divergence at each time step
+ 103     0.100000E-01 p103 weight of stabilizing filter (.01)
+  
+ IFTRAN   =  T
+ IFFLOW   =  T
+ IFHEAT   =  F
+ IFSPLIT  =  T
+ IFLOMACH =  F
+ IFUSERVP =  F
+ IFUSERMV =  F
+ IFSTRS   =  F
+ IFCHAR   =  F
+ IFCYCLIC =  F
+ IFAXIS   =  F
+ IFMVBD   =  F
+ IFMELT   =  F
+ IFMODEL  =  F
+ IFKEPS   =  F
+ IFMOAB   =  F
+ IFNEKNEK =  F
+ IFSYNC   =  T
+   
+ IFVCOR   =  F
+ IFINTQ   =  F
+ IFCWUZ   =  F
+ IFSWALL  =  F
+ IFGEOM   =  F
+ IFSURT   =  F
+ IFWCNO   =  F
+ IFCMT    =  T
+ IFVISC   =  F
+ IFFLTR   =  F
+   
+ IFTMSH for field            1    =   F
+ IFADVC for field            1    =   T
+ IFNONL for field            1    =   F
+   
+ Dealiasing enabled, lxd=            9
+  
+ Estimated eigenvalues
+ EIGAA =     2.467401100272339     
+ EIGGA =     224824.4098776694     
+ EIGAE =     2.467401100272339     
+ EIGAS =    8.3333333333333329E-002
+ EIGGE =     224824.4098776694     
+ EIGGS =     2.000000000000000     
+  
+ verify mesh topology
+   -1.000000000000000         1.000000000000000       Xrange
+   -1.000000000000000         1.000000000000000       Yrange
+   -1.000000000000000         1.000000000000000       Zrange
+ done :: verify mesh topology
+  
+  E-solver strategy:  0 itr
+ mg_nx:            1            3            6
+ mg_ny:            1            3            6
+ mg_nz:            1            3            6
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 3168 unique labels shared
+   pairwise times (avg, min, max): 3.00765e-05 2.95639e-05 3.16858e-05
+   crystal router                : 0.000145075 0.000140953 0.000146842
+   all reduce                    : 0.000202212 0.000201869 0.000202608
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 79602.4 77532 83156
+   buffer bytes (avg, min, max): 14944 13456 17280
+   setupds time 2.3904E-02 seconds   1  2        8400        8000
+   setvert3d:   4      155600      219600      155600      155600
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 29764 unique labels shared
+   pairwise times (avg, min, max): 0.000106089 0.000103402 0.000112867
+   crystal router                : 0.00107047 0.00104365 0.00108304
+   all reduce                    : 0.00146427 0.00146329 0.00146558
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 605186 592156 625044
+   buffer bytes (avg, min, max): 109101 97712 127232
+   setupds time 2.4591E-01 seconds   2  4      155600        8000
+   setvert3d:   4      155600      219600      155600      155600
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 29764 unique labels shared
+   pairwise times (avg, min, max): 0.000107219 0.000104928 0.000112724
+   crystal router                : 0.00107148 0.00104465 0.00108421
+   all reduce                    : 0.00142994 0.00142767 0.0014327
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 605186 592156 625044
+   buffer bytes (avg, min, max): 109101 97712 127232
+   setupds time 2.4432E-01 seconds   3  4      155600        8000
+   setvert3d:   6      498000     1010000      498000      498000
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 83336 unique labels shared
+   pairwise times (avg, min, max): 0.000230408 0.000225234 0.000244427
+   crystal router                : 0.00302093 0.00293839 0.00306118
+   all reduce                    : 0.00440771 0.00440361 0.00441198
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 1.64863e+06 1616924 1694164
+   buffer bytes (avg, min, max): 289581 259024 338560
+   setupds time 6.2857E-01 seconds   4  6      498000        8000
+ regenerate geometry data            1
+ vol_t,vol_v:    7.999999999994385         7.999999999994385     
+ NOTE: All elements deformed , param(59) ^=0
+ done :: regenerate geometry data            1
+  
+ h1_mg_nx:            1            3            6
+ h1_mg_ny:            1            3            6
+ h1_mg_nz:            1            3            6
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 3168 unique labels shared
+   pairwise times (avg, min, max): 3.33834e-05 3.28064e-05 3.51429e-05
+   crystal router                : 0.000145376 0.000140929 0.000147295
+   all reduce                    : 0.00019573 0.000195551 0.000195885
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 79602.4 77532 83156
+   buffer bytes (avg, min, max): 14944 13456 17280
+   setupds time 2.4585E-02 seconds   5  2        8400        8000
+   setvert3d:   4      155600      219600      155600      155600
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 29764 unique labels shared
+   pairwise times (avg, min, max): 0.000100615 9.81808e-05 0.000106502
+   crystal router                : 0.00106581 0.00103896 0.00107813
+   all reduce                    : 0.00138073 0.0013793 0.00138171
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 605186 592156 625044
+   buffer bytes (avg, min, max): 109101 97712 127232
+   setupds time 2.4152E-01 seconds   6  4      155600        8000
+   setvert3d:   4      155600      219600      155600      155600
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 29764 unique labels shared
+   pairwise times (avg, min, max): 0.000106294 0.000103831 0.000113225
+   crystal router                : 0.00106398 0.00103734 0.00107622
+   all reduce                    : 0.0014267 0.00142505 0.0014276
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 605186 592156 625044
+   buffer bytes (avg, min, max): 109101 97712 127232
+   setupds time 2.4095E-01 seconds   7  4      155600        8000
+   setvert3d:   6      498000     1010000      498000      498000
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 83336 unique labels shared
+   pairwise times (avg, min, max): 0.000231586 0.000226355 0.000246215
+   crystal router                : 0.00300383 0.00292151 0.00304472
+   all reduce                    : 0.00442646 0.00442011 0.00443079
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 1.64863e+06 1616924 1694164
+   buffer bytes (avg, min, max): 289581 259024 338560
+   setupds time 6.2720E-01 seconds   8  6      498000        8000
+   setvert3d:   7      742400     1742400      742400      742400
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 120238 unique labels shared
+   pairwise times (avg, min, max): 0.000325801 0.000319099 0.000339389
+   crystal router                : 0.00427537 0.00416172 0.00432961
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 2.36455e+06 2320612 2426436
+   buffer bytes (avg, min, max): 412192 368576 482240
+   setupds time 8.1045E-01 seconds   9  7      742400        8000
+   setvert3d:   9     1377600     4121600     1377600     1377600
+ call usrsetvert
+ done :: usrsetvert
+

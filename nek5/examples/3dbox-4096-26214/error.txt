@@ -1,0 +1,16 @@
+Command line crash:
+
+extern "C" void packfaceswrapper_(double *faces, double *packed, double *sharedIndex, int *maxIndex, int *nelt, int *nx1, int *iu, int *dir){
+
+cuda error str 4: an illegal memory access was encountered
+0: copyout Memcpy (host=0x0x343816990, dev=0x0xd0ea00000, size=164640) FAILED: 77(an illegal memory access was encountered)
+[NID 02249] 2017-02-02 12:10:58 Apid 13545722: initiated application termination
+Application 13545722 exit codes: 127
+
+
+from debugger:
+
+         call fillqWrapper(d_vtrans,d_vx,d_vy,d_vz,d_pr, d_flux(iqm),&
+                            nelt, lx1*lz1*2*ndim, nx1*ny1*nz1, &
+                            d_iface_flux, true, false)
+
